@@ -59,7 +59,7 @@ def modify_top_k(top_k):
     extented_dict = {}
     for word in top_k.keys():
         top_k[word] = top_k[word]/total
-        for syn in wordnet.synsets("good"):
+        for syn in wordnet.synsets(word):
             for l in syn.lemmas():
                 try:
                     l = ps.stem(l)
